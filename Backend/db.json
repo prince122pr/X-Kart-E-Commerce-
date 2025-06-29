@@ -1,0 +1,212 @@
+{
+  "users": [
+    {
+      "id": "hRwWdSVoj9wfsOkL2DVTz",
+      "username": "Prince",
+      "email": "prince123@gmail.com",
+      "password": "p123",
+      "isAdmin": true,
+      "cart": []
+    },
+    {
+      "id": "kw0qAEZj884h5p8-1djlk",
+      "username": "Rahul",
+      "email": "rahul91@gmail.com",
+      "password": "123",
+      "role": "Customer",
+      "isAdmin": false,
+      "cart": [
+        {
+          "product": {
+            "id": "2",
+            "title": "Cotton T-Shirt",
+            "price": "499",
+            "description": "Comfortable cotton t-shirt for daily wear",
+            "category": "Clothing",
+            "image": "https://images.unsplash.com/photo-1722310752951-4d459d28c678?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          },
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": "OSs8La6baOY3D_ui28ZoG",
+      "username": "Aman",
+      "email": "aman123@gmail.com",
+      "password": "123",
+      "role": "Customer",
+      "isAdmin": false,
+      "cart": []
+    }
+  ],
+  "products": [
+    {
+      "id": "1",
+      "title": "Wireless Earbuds",
+      "price": 1999,
+      "description": "Bluetooth 5.0 earbuds with 24h battery life",
+      "category": "Electronics",
+      "image": "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2lyZWxlc3MlMjBlYXJidWRzfGVufDB8fDB8fHww"
+    },
+    {
+      "id": "2",
+      "title": "Cotton T-Shirt",
+      "price": "499",
+      "description": "Comfortable cotton t-shirt for daily wear",
+      "category": "Clothing",
+      "image": "https://images.unsplash.com/photo-1722310752951-4d459d28c678?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+    },
+    {
+      "id": "3",
+      "title": "Laptop Stand",
+      "price": 899,
+      "description": "Adjustable laptop stand for better ergonomics",
+      "category": "Accessories",
+      "image": "https://plus.unsplash.com/premium_photo-1683736986821-e4662912a70d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8bGFwdG9wJTIwc3RhbmR8ZW58MHx8MHx8fDA%3D"
+    },
+    {
+      "id": "4",
+      "title": "LED Table Lamp with Touch Control",
+      "image": "https://images.unsplash.com/photo-1693329428271-3742bd8220cc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8TEVEJTIwVGFibGUlMjBMYW1wJTIwd2l0aCUyMFRvdWNoJTIwQ29udHJvbHxlbnwwfHwwfHx8MA%3D%3D",
+      "price": 699,
+      "category": "home",
+      "description": "Minimalistic LED lamp with touch control and brightness settings. Ideal for reading and workspaces."
+    },
+    {
+      "id": "5",
+      "title": "Hydrating Face Serum - 30ml",
+      "image": "https://images.unsplash.com/photo-1620466269712-6b7d6775b3b9?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8SHlkcmF0aW5nJTIwRmFjZSUyMFNlcnVtJTIwJTIwJTIwMzBtbHxlbnwwfHwwfHx8MA%3D%3D",
+      "price": 399,
+      "category": "beauty",
+      "description": "Lightweight face serum with vitamin C and hyaluronic acid for radiant, healthy-looking skin."
+    },
+    {
+      "id": "6",
+      "title": "Wooden Educational Puzzle Toy",
+      "image": "https://images.unsplash.com/photo-1644310134366-b5105f4360cd?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8V29vZGVuJTIwRWR1Y2F0aW9uYWwlMjBQdXp6bGUlMjBUb3l8ZW58MHx8MHx8fDA%3D",
+      "price": 359,
+      "category": "toys",
+      "description": "Colorful puzzle toy that improves hand-eye coordination and logical thinking for toddlers aged 2+."
+    },
+    {
+      "id": "7",
+      "title": "Resistance Band Set for Workouts",
+      "image": "https://images.unsplash.com/photo-1585475686930-8fcb2728eb6b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "price": 549,
+      "category": "fitness",
+      "description": "A full-body resistance band set with varying strengths. Perfect for home workouts or physical therapy."
+    },
+    {
+      "id": "8",
+      "title": "Humidifier",
+      "image": "https://images.unsplash.com/photo-1732229035217-e7e42f61af4b?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTN8fEFyb21hJTIwRGlmZnVzZXIlMjAlMjYlMjBIdW1pZGlmaWVyfGVufDB8fDB8fHww",
+      "price": 799,
+      "category": "home",
+      "description": "Relax with essential oils using this ultrasonic aroma diffuser. Also works as a mini humidifier."
+    },
+    {
+      "id": "9",
+      "title": "Bluetooth Fitness Tracker Band",
+      "image": "https://m.media-amazon.com/images/I/51K+Nm5-XxL._AC_UF1000,1000_QL80_.jpg",
+      "price": 1099,
+      "category": "electronics",
+      "description": "Track steps, heart rate, and sleep with this waterproof Bluetooth-enabled fitness tracker band."
+    },
+    {
+      "id": "NX502Aoly73bSurGCl18r",
+      "title": "Noise Cancelling Headphones",
+      "image": "https://images.unsplash.com/photo-1628202926206-c63a34b1618f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Tm9pc2UlMjBDYW5jZWxsaW5nJTIwSGVhZHBob25lc3xlbnwwfHwwfHx8MA%3D%3D",
+      "price": "2999",
+      "category": "electronics",
+      "description": "Experience immersive sound with our wireless noise-cancelling headphones."
+    },
+    {
+      "id": "10",
+      "title": "Girls' Denim Jacket",
+      "price": 1199,
+      "image": "https://via.placeholder.com/200x200.png?text=Denim+Jacket",
+      "category": "Clothing",
+      "description": "Stylish denim jacket for girls with front pockets and zip closure."
+    },
+    {
+      "id": "11",
+      "title": "USB Type-C Charger",
+      "price": 299,
+      "image": "https://via.placeholder.com/200x200.png?text=Charger",
+      "category": "Electronics",
+      "description": "Fast charging USB-C charger compatible with all modern phones."
+    },
+    {
+      "id": "12",
+      "title": "Non-Stick Frying Pan",
+      "price": 699,
+      "image": "https://via.placeholder.com/200x200.png?text=Frying+Pan",
+      "category": "Kitchen",
+      "description": "Durable frying pan with non-stick coating and cool-touch handle."
+    },
+    {
+      "id": "13",
+      "title": "Canvas Backpack",
+      "price": 999,
+      "image": "https://via.placeholder.com/200x200.png?text=Backpack",
+      "category": "Bags",
+      "description": "Spacious and durable backpack ideal for travel or school."
+    },
+    {
+      "id": "14",
+      "title": "LED Desk Lamp",
+      "price": 499,
+      "image": "https://via.placeholder.com/200x200.png?text=Desk+Lamp",
+      "category": "Home",
+      "description": "Rechargeable LED lamp with adjustable brightness and flexible neck."
+    },
+    {
+      "id": "15",
+      "title": "Wireless Gaming Mouse",
+      "price": 799,
+      "image": "https://via.placeholder.com/200x200.png?text=Gaming+Mouse",
+      "category": "Electronics",
+      "description": "Ergonomic design, high DPI sensor, and long battery life."
+    },
+    {
+      "id": "16",
+      "title": "Women’s Handbag",
+      "price": 1299,
+      "image": "https://via.placeholder.com/200x200.png?text=Handbag",
+      "category": "Fashion",
+      "description": "Elegant and spacious handbag for daily use or parties."
+    },
+    {
+      "id": "17",
+      "title": "Cotton Bedsheet Set",
+      "price": 1099,
+      "image": "https://via.placeholder.com/200x200.png?text=Bedsheet+Set",
+      "category": "Home",
+      "description": "100% cotton bedsheet with 2 pillow covers and premium finish."
+    },
+    {
+      "id": "18",
+      "title": "Electric Kettle 1.5L",
+      "price": 999,
+      "image": "https://via.placeholder.com/200x200.png?text=Kettle",
+      "category": "Kitchen",
+      "description": "Boils water quickly, auto shut-off feature, 1.5-liter capacity."
+    },
+    {
+      "id": "19",
+      "title": "Men's Formal Shoes",
+      "price": 1599,
+      "image": "https://via.placeholder.com/200x200.png?text=Formal+Shoes",
+      "category": "Footwear",
+      "description": "Elegant and comfortable formal shoes for office or events."
+    },
+    {
+      "id": "20",
+      "title": "Bluetooth Speaker",
+      "price": 1299,
+      "image": "https://via.placeholder.com/200x200.png?text=Speaker",
+      "category": "Electronics",
+      "description": "Portable speaker with deep bass, Bluetooth 5.0, and 8-hour backup."
+    }
+  ]
+}
