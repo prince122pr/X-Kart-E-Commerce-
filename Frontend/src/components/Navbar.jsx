@@ -1,74 +1,116 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { CgProfile } from "react-icons/cg";
+import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 const Navbar = () => {
-  // const user = useSelector((state) => state.userReducer?.user);
-  let user = JSON.parse(localStorage.getItem('user'));  
+  const [menuOpen, setMenuOpen] = useState(false);
+  const user = JSON.parse(localStorage.getItem("user"));
+
+  const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <nav className="w-full mb-8 flex items-center justify-between px-10 py-4 bg-gray-900 text-white shadow-md">
-      {/* Logo */}
-      <h1 className="text-2xl font-bold text-green-500">Xkart</h1>
+    <nav className="w-full mb-8 px-6 sm:px-10 py-4 bg-gray-900 text-white shadow-md relative z-50">
+      <div className="flex items-center justify-between">
+        {/* Logo */}
+        <h1 className="text-2xl font-bold text-green-500">Xkart</h1>
 
-      {/* Links */}
-      <div className="flex gap-10 text-xl items-center">
-        <NavLink
-          className={({ isActive }) => (isActive ? "text-green-500" : "")}
-          to="/"
-        >
-          Home
-        </NavLink>
+        {/* Hamburger Icon (Mobile Only) */}
+        <div className="md:hidden">
+          <button onClick={toggleMenu}>
+            {menuOpen ? <HiX size={30} /> : <HiMenuAlt3 size={30} />}
+          </button>
+        </div>
 
-        <NavLink
-          className={({ isActive }) => (isActive ? "text-green-500" : "")}
-          to="/products"
-        >
-          Products
-        </NavLink>
-
-        {/* Only for Admin */}
-        {user && user.isAdmin && (
+        {/* Desktop Menu */}
+        <div className="hidden md:flex gap-8 text-lg items-center">
           <NavLink
+            to="/"
             className={({ isActive }) => (isActive ? "text-green-500" : "")}
-            to="/admin/create-product"
           >
-            Create Product
+            Home
           </NavLink>
-        )}
+          <NavLink
+            to="/products"
+            className={({ isActive }) => (isActive ? "text-green-500" : "")}
+          >
+            Products
+          </NavLink>
 
-        {/* add to cart */}
-      {
-        user && <NavLink to="/cart" className={({ isActive }) => (isActive ? "text-green-500" : "")}>Cart</NavLink>
-      }
+          {user?.isAdmin && (
+            <NavLink
+              to="/admin/create-product"
+              className={({ isActive }) => (isActive ? "text-green-500" : "")}
+            >
+              Create Product
+            </NavLink>
+          )}
 
-        {/* Only if user not logged in */}
-        {!user && (
-          <>
+          {user && (
             <NavLink
+              to="/cart"
               className={({ isActive }) => (isActive ? "text-green-500" : "")}
-              to="/login"
             >
-              Login
+              Cart
             </NavLink>
-            <NavLink
-              className={({ isActive }) => (isActive ? "text-green-500" : "")}
-              to="/register"
-            >
-              Signup
-            </NavLink>
-          </>
-        )}
+          )}
+
+          {!user && (
+            <>
+              <NavLink
+                to="/login"
+                className={({ isActive }) => (isActive ? "text-green-500" : "")}
+              >
+                Login
+              </NavLink>
+              <NavLink
+                to="/register"
+                className={({ isActive }) => (isActive ? "text-green-500" : "")}
+              >
+                Signup
+              </NavLink>
+            </>
+          )}
+          <NavLink
+            to="/user-profile"
+            className={({ isActive }) => (isActive ? "text-green-500" : "")}
+          >
+            <CgProfile size={28} />
+          </NavLink>
+        </div>
       </div>
 
-      {/* Profile Icon */}
-      <NavLink
-        className={({ isActive }) => (isActive ? "text-green-500" : "")}
-        to="/user-profile"
-      >
-        <CgProfile size={35} />
-      </NavLink>
+      {/* Mobile Menu */}
+      {menuOpen && (
+        <div className="md:hidden mt-4 flex flex-col gap-4 text-lg bg-gray-800 rounded-lg px-4 py-3">
+          <NavLink to="/" onClick={toggleMenu}>Home</NavLink>
+          <NavLink to="/products" onClick={toggleMenu}>Products</NavLink>
 
-      
+          {user?.isAdmin && (
+            <NavLink to="/admin/create-product" onClick={toggleMenu}>
+              Create Product
+            </NavLink>
+          )}
+
+          {user && (
+            <NavLink to="/cart" onClick={toggleMenu}>Cart</NavLink>
+          )}
+
+          {!user && (
+            <>
+              <NavLink to="/login" onClick={toggleMenu}>Login</NavLink>
+              <NavLink to="/register" onClick={toggleMenu}>Signup</NavLink>
+            </>
+          )}
+
+          <NavLink to="/user-profile" onClick={toggleMenu}>
+            <div className="flex items-center gap-2">
+              <CgProfile size={25} />
+              <span>Profile</span>
+            </div>
+          </NavLink>
+        </div>
+      )}
     </nav>
   );
 };
