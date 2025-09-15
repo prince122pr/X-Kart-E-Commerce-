@@ -25,7 +25,7 @@ const App = () => {
   }, [products])
 
   return (
-    <div className="w-full min-h-screen px-10 py-5 text-white bg-gradient-to-br from-gray-800 via-gray-900 to-black font-light">
+    <div className="w-full min-h-screen px-4 sm:px-8 py-5 text-white bg-gradient-to-br from-gray-800 via-gray-900 to-black font-light">
        <Navbar/>
        <MainRoutes/>
     </div>

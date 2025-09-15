@@ -21,10 +21,10 @@ const CreateProduct = () => {
   };
 
   return (
-    <div className="w-full flex items-center justify-center px-4 mt-8">
+    <div className="w-full flex items-center justify-center mt-8">
       <form
         onSubmit={handleSubmit(CreateProductHandler)}
-        className="w-full max-w-[900px] bg-white/10 backdrop-blur-xl border border-white/30 shadow-2xl text-white rounded-3xl px-10 py-12 flex flex-col gap-6"
+        className="w-full sm:max-w-[900px] bg-white/10 backdrop-blur-xl border border-white/30 shadow-2xl text-white rounded-3xl px-4 sm:px-10 py-12 flex flex-col gap-6"
       >
         <h2 className="text-4xl mb-4 font-bold text-center">
           Add New Product 🛒

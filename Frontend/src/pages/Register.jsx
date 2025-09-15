@@ -37,10 +37,10 @@ const Register = () => {
   };
 
   return (
-    <div className="w-full flex items-center justify-center px-4 mt-16">
+    <div className="w-full flex items-center justify-center mt-16">
       <form
         onSubmit={handleSubmit(registerHandler)}
-        className="w-full max-w-[600px] bg-white/10 backdrop-blur-xl border border-white/30 shadow-2xl text-white rounded-3xl px-10 py-10 flex flex-col gap-6"
+        className="w-full sm:max-w-[600px] bg-white/10 backdrop-blur-xl border border-white/30 shadow-2xl text-white rounded-3xl sm:px-10 px-4 py-10 flex flex-col gap-6"
       >
            <h2 className="text-3xl mb-2 font-bold text-center">Create Your Account 🚀</h2>      
 

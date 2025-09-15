@@ -75,9 +75,11 @@ const ProductDetails = () => {
 
   return (
     <>
+
+    {/* details part */}
     { user ?
     (
-      <div className="max-w-5xl mx-auto mt-10 p-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white shadow-lg flex flex-col md:flex-row gap-10">
+      <div className="w-full sm:max-w-[900px] mx-auto mt-10 px-4 py-6 sm:p-6 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl text-white shadow-lg flex flex-col md:flex-row gap-10">
         {/* Product Image */}
         <div className="flex-1">
           <img
@@ -132,12 +134,14 @@ const ProductDetails = () => {
       Go to Login
     </button>
   </div>}
+
+
       {/* updated part */}
       {user && user?.isAdmin && (
-        <div className="w-full flex items-center justify-center px-4 mt-16">
+        <div className="w-full flex items-center justify-center mt-16">
           <form
             onSubmit={handleSubmit(updateProductHandler)}
-            className="w-full max-w-[900px] bg-white/10 backdrop-blur-xl border border-white/30 shadow-2xl text-white rounded-3xl px-10 py-12 flex flex-col gap-6"
+            className="w-full max-w-[900px] bg-white/10 backdrop-blur-xl border border-white/30 shadow-2xl text-white rounded-3xl px-4 sm:px-10 py-12 flex flex-col gap-6"
           >
             <h2 className="text-4xl mb-4 font-bold text-center">
               Update Product 🛠️

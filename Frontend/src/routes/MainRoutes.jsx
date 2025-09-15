@@ -20,6 +20,7 @@ const CreateProduct = lazy(() => import('../pages/admin/CreateProduct'))
 const ProductDetails = lazy(() => import('../pages/admin/ProductDetails'))
 const PageNotFound = lazy(() => import('../pages/PageNFound'))
 const Cart = lazy(() => import('../pages/Cart'))
+const Checkout = lazy(() => import('../pages/Checkout'))
 
 
 const MainRoutes = () => {
@@ -48,9 +49,12 @@ const MainRoutes = () => {
       <Route path="/product/:id" element={<ProductDetails />} />
       <Route path="*" element={<PageNotFound />} />
 
-      { 
+      {
         user &&
-        <Route path="/cart" element={<Cart />} />
+        <>
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />} />
+        </>
       }
      
     </Routes>

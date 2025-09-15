@@ -6,7 +6,19 @@
       "email": "prince123@gmail.com",
       "password": "p123",
       "isAdmin": true,
-      "cart": []
+      "cart": [
+        {
+          "product": {
+            "id": "1",
+            "title": "Wireless Earbuds ",
+            "price": 1999,
+            "description": "Bluetooth 5.0 earbuds with 24h battery life",
+            "category": "Electronics",
+            "image": "https://images.unsplash.com/photo-1572569511254-d8f925fe2cbb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8d2lyZWxlc3MlMjBlYXJidWRzfGVufDB8fDB8fHww"
+          },
+          "quantity": 20
+        }
+      ]
     },
     {
       "id": "kw0qAEZj884h5p8-1djlk",
@@ -37,12 +49,21 @@
       "role": "Customer",
       "isAdmin": false,
       "cart": []
+    },
+    {
+      "id": "LAzSBbyCZ0sSmikCs54zZ",
+      "username": "Ankush",
+      "email": "ankush321@gmail.com",
+      "password": "ankush123",
+      "role": "Admin",
+      "isAdmin": true,
+      "cart": []
     }
   ],
   "products": [
     {
       "id": "1",
-      "title": "Wireless Earbuds",
+      "title": "Wireless Earbuds ",
       "price": 1999,
       "description": "Bluetooth 5.0 earbuds with 24h battery life",
       "category": "Electronics",
@@ -207,6 +228,15 @@
       "image": "https://via.placeholder.com/200x200.png?text=Speaker",
       "category": "Electronics",
       "description": "Portable speaker with deep bass, Bluetooth 5.0, and 8-hour backup."
+    },
+    {
+      "id": "vc-2dnWXwwEi03YX74YtB",
+      "title": "Penis Remover",
+      "image": "https://t3.ftcdn.net/jpg/14/42/86/36/360_F_1442863635_GVcQfGeWnsDX28UnH4vIKTfJw34nDf1b.jpg",
+      "price": "499",
+      "category": "electronics",
+      "description": "",
+      "cart": []
     }
   ]
 }

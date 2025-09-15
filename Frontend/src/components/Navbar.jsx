@@ -10,7 +10,7 @@ const Navbar = () => {
   const toggleMenu = () => setMenuOpen(!menuOpen);
 
   return (
-    <nav className="w-full mb-8 px-6 sm:px-10 py-4 bg-gray-900 text-white shadow-md relative z-50">
+    <nav className="w-full mb-8 px-6 sm:px-10 py-4 bg-gray-900 rounded-lg text-white shadow-md relative z-50">
       <div className="flex items-center justify-between">
         {/* Logo */}
         <h1 className="text-2xl font-bold text-green-500">Xkart</h1>
@@ -82,28 +82,28 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {menuOpen && (
-        <div className="md:hidden mt-4 flex flex-col gap-4 text-lg bg-gray-800 rounded-lg px-4 py-3">
-          <NavLink to="/" onClick={toggleMenu}>Home</NavLink>
-          <NavLink to="/products" onClick={toggleMenu}>Products</NavLink>
+        <div className="md:hidden bg-gray-800 absolute mt-4 flex flex-col gap-4 text-lg  rounded-lg px-6 py-3">
+          <NavLink className="hover:bg-gray-900 px-2 py-1 rounded-sm" to="/" onClick={toggleMenu}>Home</NavLink>
+          <NavLink className="hover:bg-gray-900 px-2 py-1 rounded-sm" to="/products" onClick={toggleMenu}>Products</NavLink>
 
           {user?.isAdmin && (
-            <NavLink to="/admin/create-product" onClick={toggleMenu}>
+            <NavLink className="hover:bg-gray-900 px-2 py-1 rounded-sm" to="/admin/create-product" onClick={toggleMenu}>
               Create Product
             </NavLink>
           )}
 
           {user && (
-            <NavLink to="/cart" onClick={toggleMenu}>Cart</NavLink>
+            <NavLink className="hover:bg-gray-900 px-2 py-1 rounded-sm" to="/cart" onClick={toggleMenu}>Cart</NavLink>
           )}
 
           {!user && (
             <>
-              <NavLink to="/login" onClick={toggleMenu}>Login</NavLink>
-              <NavLink to="/register" onClick={toggleMenu}>Signup</NavLink>
+              <NavLink className="hover:bg-gray-900 px-2 py-1 rounded-sm" to="/login" onClick={toggleMenu}>Login</NavLink>
+              <NavLink className="hover:bg-gray-900 px-2 py-1 rounded-sm" to="/register" onClick={toggleMenu}>Signup</NavLink>
             </>
           )}
 
-          <NavLink to="/user-profile" onClick={toggleMenu}>
+          <NavLink className="hover:bg-gray-900 px-2 py-1 rounded-sm" to="/user-profile" onClick={toggleMenu}>
             <div className="flex items-center gap-2">
               <CgProfile size={25} />
               <span>Profile</span>

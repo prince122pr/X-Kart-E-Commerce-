@@ -26,10 +26,10 @@ const Login = () => {
   };
 
   return (
-    <div className="w-full flex items-center justify-center px-4 mt-16">
+    <div className="w-full flex items-center justify-center mt-16">
       <form
         onSubmit={handleSubmit(loginHandler)}
-        className="w-full max-w-[500px] bg-white/10 backdrop-blur-xl border border-white/30 shadow-2xl text-white rounded-3xl px-10 py-12 flex flex-col gap-6"
+        className="w-full sm:max-w-[600px] bg-white/10 backdrop-blur-xl border border-white/30 shadow-2xl text-white rounded-3xl sm:px-10 px-4 py-10 flex flex-col gap-6"
       >
         <h2 className="text-3xl font-bold text-center">Log In 🔐</h2>
         <p className="text-center text-sm text-white/80">
@@ -39,7 +39,7 @@ const Login = () => {
         <div className="flex flex-col gap-2">
           <label htmlFor="username" className="text-lg font-semibold">
             Enter your email
-          </label>
+          </label>  
           <input
             {...register("email")}
             id="email"
